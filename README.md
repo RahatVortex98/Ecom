@@ -149,10 +149,11 @@ Visit http://127.0.0.1:8000/ in your browser.
 
 📷 Screenshots
 
-Main Page :Store
+🏬 Main Store Page
+
+![store!](https://github.com/user-attachments/assets/ae80fe08-dddb-4943-a2ff-19cb520bd194)
 
 
-![store!](https://github.com/user-attachments/assets/9875b32c-aaa5-409c-93d7-2558ea6e1804)
 
 
 Customer Cart :
