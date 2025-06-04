@@ -151,7 +151,7 @@ Visit http://127.0.0.1:8000/ in your browser.
 
 🏬 Main Store Page
 
-[![store!](https://github.com/user-attachments/assets/ae80fe08-dddb-4943-a2ff-19cb520bd194)](https://github.com/RahatVortex98/Ecom/blob/46ce087d929888c3a958436fe56c148f26ce1d28/store!.PNG)
+![image alt](https://github.com/RahatVortex98/Ecom/blob/d8d5a93810a1074c8fa59cccc4b93bed62133f89/store!.PNG)
 
 
 
