@@ -1,0 +1,65 @@
+{% extends "main.html" %}
+{% load static %}
+{% block content %}
+<div class="container my-5">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+
+      <!-- Success Message -->
+      <div class="alert alert-success d-flex align-items-center" role="alert">
+        <svg class="bi flex-shrink-0 me-2" width="32" height="32" role="img" aria-label="Success:">
+          <use xlink:href="#check-circle-fill"/>
+        </svg>
+        <div>
+          <h4 class="mb-0">{{ message }}</h4>
+          <small class="text-muted">We will process your order and send you updates via email.</small>
+        </div>
+      </div>
+
+      <!-- Order Summary Card -->
+      <div class="card shadow-sm">
+        <div class="card-header bg-primary text-white">
+          <h5 class="mb-0">🧾 Order Summary</h5>
+        </div>
+        <div class="card-body p-3">
+
+          <!-- Products List -->
+          <ul class="list-group list-group-flush">
+            {% for item in items %}
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              <div>
+                <strong>{{ item.product.name }}</strong>
+                <span class="badge bg-secondary ms-2">x{{ item.quantity }}</span>
+              </div>
+              <span class="text-success fw-bold">৳ {{ item.get_total|floatformat:2 }}</span>
+            </li>
+            {% endfor %}
+          </ul>
+
+          <!-- Total -->
+          <div class="d-flex justify-content-between mt-4 border-top pt-3 fs-5 fw-semibold">
+            <span>Total Amount:</span>
+            <span class="text-success">৳ {{ order.get_cart_total|floatformat:2 }}</span>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Continue Shopping Button -->
+      <div class="text-center mt-4">
+        <a href="{% url 'store' %}" class="btn btn-primary btn-lg px-5">
+          <i class="bi bi-arrow-left-circle me-2"></i> Continue Shopping
+        </a>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- Bootstrap Icons SVG sprite -->
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="check-circle-fill" fill="currentColor" viewBox="0 0 16 16">
+    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM6.97 11.03a.75.75 0 0 0 1.07 0l3.992-3.992a.75.75 0 1 0-1.06-1.06L7.5 9.439 5.573 7.512a.75.75 0 1 0-1.06 1.06l2.457 2.457z"/>
+  </symbol>
+</svg>
+{% endblock content %}

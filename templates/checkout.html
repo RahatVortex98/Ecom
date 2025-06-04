@@ -1,0 +1,110 @@
+{% extends "main.html" %}
+{% load static %}
+{% block content %}
+
+<div class="container my-5">
+    <div class="row">
+        <!-- Checkout Form -->
+        <form id="form" method="POST" action="{% url 'checkout' %}">
+            {% csrf_token %}
+            <div id="user-info">
+                <div class="form-group mb-3">
+                    <input type="text" required class="form-control" name="name" placeholder="Full Name">
+                </div>
+                <div class="form-group mb-3">
+                    <input type="email" required class="form-control" name="email" placeholder="Email Address">
+                </div>
+            </div>
+
+            <div id="shipping-info">
+                <p class="fw-bold mb-3">Shipping Address</p>
+                <div class="form-group mb-3">
+                    <input type="text" required class="form-control" name="address" placeholder="Street Address">
+                </div>
+                <div class="form-group mb-3">
+                    <input type="text" required class="form-control" name="city" placeholder="City">
+                </div>
+                <div class="form-group mb-3">
+                    <input type="text" required class="form-control" name="state" placeholder="State">
+                </div>
+                <div class="form-group mb-3">
+                    <input type="text" required class="form-control" name="zipcode" placeholder="Zip Code">
+                </div>
+                <div class="form-group mb-4">
+                    <input type="text" class="form-control" name="country" placeholder="Country">
+                </div>
+            </div>
+
+            <!-- Payment Method Selection -->
+            <div class="form-group mb-4">
+                <label class="fw-bold mb-2">Select Payment Method:</label>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="payment_method" id="cod" value="COD" required>
+                    <label class="form-check-label" for="cod">
+                        Cash on Delivery (COD)
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="payment_method" id="bkash" value="Bkash" required>
+                    <label class="form-check-label" for="bkash">
+                        Bkash
+                    </label>
+                </div>
+            </div>
+
+            <input type="submit" id="form-button" class="btn btn-success w-100" value="Continue">
+        </form>
+
+        <!-- Order Summary -->
+        <div class="col-lg-6 mb-4">
+            <div class="card p-4 shadow-lg border-0">
+                <a class="btn btn-outline-secondary mb-3" href="{% url 'cart' %}">
+                    <i class="bi bi-arrow-left"></i> Back to Cart
+                </a>
+
+                <h4 class="mb-4 text-primary border-bottom pb-2">🧾 Order Summary</h4>
+
+                <!-- Header Row -->
+                <div class="d-flex align-items-center bg-light text-dark fw-semibold py-2 px-2 rounded mb-3" style="font-size: 0.95rem;">
+                    <div style="flex: 2;">Product</div>
+                    <div style="flex: 2;">Name</div>
+                    <div style="flex: 1;" class="text-center">Qty</div>
+                    <div style="flex: 1;" class="text-end">Total</div>
+                </div>
+
+                {% for item in items %}
+                <!-- Product Row -->
+                <div class="d-flex align-items-center border-bottom py-3 px-2">
+                    <div style="flex: 2;">
+                        <img src="{{ item.product.imageUrl }}" class="img-thumbnail" style="max-width: 70px;" alt="{{ item.product.name }}">
+                    </div>
+                    <div style="flex: 2;">
+                        <p class="mb-0">{{ item.product.name }}</p>
+                    </div>
+                    <div style="flex: 1;" class="text-center">
+                        <span class="badge bg-secondary">{{ item.quantity }}</span>
+                    </div>
+                    <div style="flex: 1;" class="text-end">
+                        <p class="mb-0 text-success fw-bold">৳ {{ item.get_total|floatformat:2 }}</p>
+                    </div>
+                </div>
+                {% endfor %}
+
+                <!-- Totals -->
+                <div class="border-top pt-3 mt-4">
+                    <div class="d-flex justify-content-between mb-2">
+                        <h6 class="text-muted">Total Items:</h6>
+                        <h6>{{ order.get_cart_items }}</h6>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <h5 class="text-dark">Total Amount:</h5>
+                        <h5 class="text-success fw-bold">৳ {{ order.get_cart_total|floatformat:2 }}</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+{% endblock content %}

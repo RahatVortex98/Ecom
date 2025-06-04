@@ -1,41 +1,26 @@
 {% extends "main.html" %}
 {% load static %}
 
-
 {% block content %}
-
-
-<div class="container mx-auto mt-4">
+<div class="container mt-5">
   <div class="row">
-    <!-- Card 1 -->
-     {% for product in products  %}
-    <div class="col-md-4">
-      <div class="card" style="width: 18rem;">
-        <img src="{{ product.imageUrl }}" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">{{ product.name }}</h5>
+    <div class="col-md-6">
+      <img src="{{ product.imageUrl }}" class="img-fluid rounded" alt="{{ product.name }}">
+    </div>
+    <div class="col-md-6">
+      <h2>{{ product.name }}</h2>
+      <p class="text-muted">Price: ${{ product.price|floatformat:2 }}</p>
+      <p><strong>About Product: </strong> {{ product.description|linebreaks}}</p>
 
-         <h6 class="card-subtitle mb-2">
-         <strong>৳</strong> {{ product.price|default:"0"|floatformat:2 }}
-        </h6>
-
-          <!-- store.html -->
+      <div class="mt-4">
         <button class="btn btn-primary update-cart" data-product="{{ product.id }}" data-action="add">Add to Cart</button>
 
-
-
-          <a href="{% url 'detail' product.pk %}" class="btn btn-secondary">View</a>
-        </div>
+        <a href="{% url 'store' %}" class="btn btn-secondary">Back to Shop</a>
       </div>
     </div>
-    {% endfor %}
-
-    
-
-   
-    
   </div>
 </div>
+
 <script>
 document.addEventListener('DOMContentLoaded', function () {
     document.querySelectorAll('.update-cart').forEach(button => {
@@ -59,10 +44,4 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 </script>
-
-
-
-    
-    
-
-{% endblock content %}
+{% endblock %}
