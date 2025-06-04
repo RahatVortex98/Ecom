@@ -29,23 +29,9 @@ This is a modern eCommerce web application built with **Django**, featuring a dy
 ---
 
 ## 📁 Project Structure
-ecommerce_project/
-│
-├── ecommerce/ # Main Django project
-│ ├── settings.py
-│ └── urls.py
-│
-├── store/ # Main app
-│ ├── models.py
-│ ├── views.py
-│ ├── urls.py
-│ ├── templates/
-│ │ ├── cart.html
-│ │ ├── store.html
-│ │ └── main.html
-│ └── static/ # Static files (CSS, JS, images)
-│
-└── manage.py
+
+
+![ps](https://github.com/user-attachments/assets/2eae8716-f12b-469f-bced-044bcc710989)
 
 
 ---
