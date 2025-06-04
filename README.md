@@ -85,29 +85,29 @@ Visit http://127.0.0.1:8000/ in your browser.
 
 
 
-Customer Cart :
+🛒 Customer Cart
 
 ![customer cart](https://github.com/user-attachments/assets/af55a4e3-9e6c-4a21-92eb-be14d7f0346b)
 
 
-Check-out page :
+✅ Checkout Page
 
 ![checkout page](https://github.com/user-attachments/assets/3fd33aa2-d601-4fc4-b8e1-ec2657e8e539)
 
 
-After confrimation :
+📧 After Order Confirmation
 
 ![order Confrimation!](https://github.com/user-attachments/assets/55ba01a6-97a9-4c73-afe2-c09eff2ea4ba)
 
 
 
-Customer Got Mail :
+📩 Customer Got Email
 
 ![customer got the msG](https://github.com/user-attachments/assets/5aecdde7-260b-457c-98ed-302afabacbe5)
 
 
 
-Owner GoT mail Too :
+🧾 Owner Got Notification
 
 ![owner got notify about order](https://github.com/user-attachments/assets/7d3a84f9-7488-4437-8e99-187a3cbe1b40)
 
