@@ -151,28 +151,36 @@ Visit http://127.0.0.1:8000/ in your browser.
 
 Main Page :Store
 
-![store!](https://github.com/user-attachments/assets/f4879dfa-0064-4789-a16a-11f0be7059d9)
+
+![store!](https://github.com/user-attachments/assets/9875b32c-aaa5-409c-93d7-2558ea6e1804)
+
 
 Customer Cart :
 
-![customer cart](https://github.com/user-attachments/assets/8954612a-a1b5-404f-9485-002233336fc8)
+![customer cart](https://github.com/user-attachments/assets/af55a4e3-9e6c-4a21-92eb-be14d7f0346b)
+
 
 Check-out page :
 
-![checkout page](https://github.com/user-attachments/assets/5d669ebb-08a0-42fe-a911-668282fd7b36)
+![checkout page](https://github.com/user-attachments/assets/3fd33aa2-d601-4fc4-b8e1-ec2657e8e539)
+
 
 After confrimation :
 
-![order Confrimation!](https://github.com/user-attachments/assets/ccfbd654-99b2-4353-89ec-57fdd00d8c60)
+![order Confrimation!](https://github.com/user-attachments/assets/55ba01a6-97a9-4c73-afe2-c09eff2ea4ba)
 
 
-Customer Got Mail : 
 
-![customer got the msG](https://github.com/user-attachments/assets/906cdddb-839d-41bd-8355-7edee3fcc8ed)
+Customer Got Mail :
+
+![customer got the msG](https://github.com/user-attachments/assets/5aecdde7-260b-457c-98ed-302afabacbe5)
+
+
 
 Owner GoT mail Too :
 
-![owner got notify about order](https://github.com/user-attachments/assets/e25ad7ed-5bc0-42f9-bb98-36827e1d333e)
+![owner got notify about order](https://github.com/user-attachments/assets/7d3a84f9-7488-4437-8e99-187a3cbe1b40)
+
 
 
 
